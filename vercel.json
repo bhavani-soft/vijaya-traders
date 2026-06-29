@@ -1,7 +1,7 @@
 {
-  "buildCommand": "cd frontend && cross-env CI=false npm run build",
+  "installCommand": "npm install --prefix frontend --legacy-peer-deps",
+  "buildCommand": "npm run build --prefix frontend",
   "outputDirectory": "frontend/build",
-  "installCommand": "cd frontend && npm install --legacy-peer-deps",
   "framework": null,
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
