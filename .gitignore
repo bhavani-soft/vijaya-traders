@@ -1,14 +1,6 @@
-# Node / frontend
-frontend/node_modules/
-frontend/build/
-frontend/.env
-frontend/.env.local
-
-# Python / backend
-backend/__pycache__/
-backend/venv/
-backend/.env
-
-# OS files
+node_modules/
+build/
+.env
+.env.local
 .DS_Store
 *.log
