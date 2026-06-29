@@ -1,0 +1,126 @@
+{
+  "project_name": "Vijaya Traders B2B Export",
+  "theme": "LIGHT",
+  "archetype": "Archetype 1 (Organic & Earthy) blended with Archetype 5 (Luxury)",
+  "design_philosophy": "Immersive, premium, and deeply rooted in Indian agrarian heritage, yet strictly modern and corporate. Generous whitespace, earthy tones, high-resolution textures.",
+  "colors": {
+    "primary": "#D4AF37",
+    "primary_name": "Basmati Gold",
+    "secondary": "#2E5A27",
+    "secondary_name": "Paddy Green",
+    "text_dark": "#2C3539",
+    "text_dark_name": "Monsoon Charcoal",
+    "background": "#FAFAFA",
+    "background_name": "Chalk White",
+    "surface": "#FFFFFF",
+    "border": "rgba(44, 53, 57, 0.1)",
+    "accent_hover": "#b8952b"
+  },
+  "typography": {
+    "heading_font": "Cormorant Garamond, serif",
+    "subheading_font": "Marcellus, serif",
+    "body_font": "Manrope, sans-serif",
+    "scales": {
+      "h1": "text-5xl sm:text-6xl lg:text-7xl font-light tracking-tight text-monsoon-charcoal font-serif",
+      "h2": "text-4xl sm:text-5xl font-light tracking-tight text-monsoon-charcoal font-serif",
+      "h3": "text-2xl sm:text-3xl font-medium text-monsoon-charcoal font-serif",
+      "overline": "text-sm uppercase tracking-[0.2em] text-basmati-gold font-medium font-marcellus",
+      "body_large": "text-lg sm:text-xl leading-relaxed text-monsoon-charcoal/80 font-sans",
+      "body": "text-base leading-relaxed text-monsoon-charcoal/70 font-sans",
+      "small": "text-sm text-monsoon-charcoal/60 font-sans"
+    }
+  },
+  "spacing_and_layout": {
+    "section_padding": "py-24 sm:py-32",
+    "container": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+    "grid_bento": "grid grid-cols-1 md:grid-cols-8 lg:grid-cols-12 gap-6 lg:gap-8",
+    "border_radius": "rounded-none",
+    "card_padding": "p-8 sm:p-12"
+  },
+  "ui_components": {
+    "buttons": {
+      "primary": "bg-basmati-gold text-white px-8 py-4 uppercase tracking-widest text-sm font-semibold hover:bg-basmati-gold/90 transition-colors rounded-none",
+      "secondary": "border border-basmati-gold text-basmati-gold px-8 py-4 uppercase tracking-widest text-sm font-semibold hover:bg-basmati-gold hover:text-white transition-colors rounded-none"
+    },
+    "cards": {
+      "default": "bg-white border border-monsoon-charcoal/5 hover:border-basmati-gold/30 transition-all duration-300 shadow-sm hover:shadow-md"
+    },
+    "inputs": {
+      "default": "border-b border-monsoon-charcoal/20 bg-transparent py-3 px-0 focus:border-basmati-gold focus:ring-0 outline-none text-monsoon-charcoal font-sans rounded-none w-full"
+    }
+  },
+  "page_structure": [
+    {
+      "section": "Header",
+      "layout": "Fixed top, backdrop-blur-xl bg-chalk-white/90 border-b border-monsoon-charcoal/5. Logo on left, desktop nav links centered, 'Request Quote' CTA on right.",
+      "components": ["Lucide Icons (Menu, X)"]
+    },
+    {
+      "section": "Hero",
+      "layout": "100vh full-screen. Background video loop (or static fallback) of sunset rice fields. bg-monsoon-charcoal/40 overlay. Centralized dramatic typography. Dual CTA. Bottom edge features scrolling marquee of certifications.",
+      "content": "Golden sunset Indian paddy fields, scrolling logos (ISO 9001, FSSAI, FDA, GMP, APEDA)."
+    },
+    {
+      "section": "About Us (Heritage)",
+      "layout": "Asymmetrical layout. Left: Large heritage typography and story. Right: 4-card grid (Ethical Sourcing, Automated Milling, Global Logistics, Stringent QC).",
+      "content": "Use indian farmer agriculture image as a structural element or background for the narrative."
+    },
+    {
+      "section": "Product Catalog",
+      "layout": "Tabs component (Shadcn customized) or standard tabbed layout. Tabs: Premium Basmati, Non-Basmati, Packaging. Data-dense technical cards for specs (grain length, moisture, broken %).",
+      "content": "Basmati rice bowl, raw rice grains, jute sack textures."
+    },
+    {
+      "section": "Global Footprint",
+      "layout": "Dark section (bg-monsoon-charcoal text-white). Interactive or highly visual SVG world map. Highlighted trade routes to Middle East, Europe, USA, West Africa using Gold dots/lines.",
+      "content": "Cargo ship port container image layered subtly in the background with blend-mode."
+    },
+    {
+      "section": "B2B Inquiry Form",
+      "layout": "Split layout. Left: Contact info, office addresses. Right: B2B lead form (Name, Company, Country, Product Interest, Order Qty).",
+      "content": "Simple, elegant form fields using the 'inputs' design token."
+    }
+  ],
+  "media_assets": {
+    "hero_fallback": {
+      "url": "https://images.pexels.com/photos/28093912/pexels-photo-28093912.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Golden sunset Indian paddy fields"
+    },
+    "heritage_story": {
+      "url": "https://images.pexels.com/photos/29039798/pexels-photo-29039798.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Indian farmer tending to rice fields"
+    },
+    "raw_rice_specs": {
+      "url": "https://images.pexels.com/photos/7421207/pexels-photo-7421207.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Macro shot of uncooked basmati grains"
+    },
+    "cooked_basmati": {
+      "url": "https://images.pexels.com/photos/7593252/pexels-photo-7593252.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Aromatic basmati rice bowl"
+    },
+    "packaging_jute": {
+      "url": "https://images.unsplash.com/photo-1612676777268-24594d85b631?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDF8MHwxfHNlYXJjaHwyfHxqdXRlJTIwc2FjayUyMHRleHR1cmV8ZW58MHx8fHwxNzgxODg5MjQ2fDA&ixlib=rb-4.1.0&q=85",
+      "description": "Jute sack texture for packaging section"
+    },
+    "global_shipping": {
+      "url": "https://images.pexels.com/photos/35458829/pexels-photo-35458829.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Cargo ship at sunset for Global Footprint section"
+    }
+  },
+  "motion_and_interactions": {
+    "scroll_reveal": "Use framer-motion for elegant, slow fade-up and slight y-axis translation on scroll.",
+    "hover_effects": "Images scale up slightly (scale-105) within hidden overflow containers. Buttons crossfade colors smoothly.",
+    "marquee": "Use react-fast-marquee for the certifications ticker. Smooth, continuous flow."
+  },
+  "instructions_to_main_agent": [
+    "Install Google Fonts in index.css: @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Marcellus&family=Manrope:wght@300;400;500;600&display=swap');",
+    "Configure tailwind.config.js with colors: 'basmati-gold': '#D4AF37', 'paddy-green': '#2E5A27', 'monsoon-charcoal': '#2C3539', 'chalk-white': '#FAFAFA'.",
+    "Configure tailwind.config.js with fonts: serif: ['Cormorant Garamond', 'serif'], marcellus: ['Marcellus', 'serif'], sans: ['Manrope', 'sans-serif'].",
+    "Ensure the hero section uses an overlay over the background image to maintain APCA text contrast.",
+    "All interactive and key informational elements MUST include a 'data-testid' attribute (e.g., data-testid='hero-quote-button').",
+    "Implement a responsive tab navigation for the Product Catalog.",
+    "The Global Footprint map can be implemented using react-simple-maps or a high-quality SVG graphic with hover tooltips.",
+    "Ensure hybrid_fullstack setup: React frontend (js/jsx) with a backend (Express/Node) connecting to MongoDB to accept the Contact Form POST request and an Admin View to fetch them."
+  ]
+}
+
