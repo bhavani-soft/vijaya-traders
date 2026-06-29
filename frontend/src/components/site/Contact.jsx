@@ -1,9 +1,10 @@
 import { useState } from "react";
-import axios from "axios";
 import { toast } from "sonner";
 import { ArrowRight, MapPin, Mail, Phone } from "lucide-react";
 
-const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
+// Replace with your Formspree form ID from https://formspree.io
+// Sign up free → New Form → copy the ID (e.g. "xpwzgevk")
+const FORMSPREE_ID = "xpwzgevk";
 
 const PRODUCT_OPTIONS = [
   "1121 Basmati", "1509 Basmati", "1401 Basmati", "Pusa Basmati",
@@ -29,16 +30,24 @@ export default function Contact() {
     }
     setLoading(true);
     try {
-      await axios.post(`${API}/inquiries`, form);
-      toast.success("Inquiry received. Our export team will reply within 24 hours.");
-      setForm({
-        name: "", email: "", company: "", country: "",
-        phone: "", product_interest: PRODUCT_OPTIONS[0],
-        order_quantity_mt: "", message: "",
+      const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        body: JSON.stringify(form),
       });
-    } catch (err) {
-      const msg = err?.response?.data?.detail || "Could not submit. Please try again.";
-      toast.error(typeof msg === "string" ? msg : "Submission failed.");
+      if (res.ok) {
+        toast.success("Inquiry received. Our export team will reply within 24 hours.");
+        setForm({
+          name: "", email: "", company: "", country: "",
+          phone: "", product_interest: PRODUCT_OPTIONS[0],
+          order_quantity_mt: "", message: "",
+        });
+      } else {
+        const data = await res.json();
+        toast.error(data?.errors?.[0]?.message || "Submission failed. Please try again.");
+      }
+    } catch {
+      toast.error("Network error. Please check your connection and try again.");
     } finally {
       setLoading(false);
     }
